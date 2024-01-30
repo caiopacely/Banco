@@ -50,12 +50,14 @@ public class App {
                 case 2:                                      
                     
                     System.out.printf("Enter the number account: ");
-                    conta = sc.nextInt();
+                    int cont = sc.nextInt();
                     while (true){
-                        Integer pos = ver(list, conta);
+                        Integer pos = ver(list, cont);
                         
                         if(pos==null){
+                            System.out.printf("Account does not exist: ");
                             System.out.printf("Enter the number account: ");
+                            cont = sc.nextInt();
                             
                         }
                         else{
@@ -66,7 +68,7 @@ public class App {
                     System.out.printf("Password: ");
                     password = sc.nextInt();
                     
-                    List<dados> result = list.stream().filter(x -> x.getConta() == conta).collect(Collectors.toList());
+                    List<dados> result = list.stream().filter(x -> x.getConta() == cont).collect(Collectors.toList());
                                       
                     for(dados obj: result){
                         System.out.printf("hello! %s%n",obj.getName());                       
