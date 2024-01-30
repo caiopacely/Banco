@@ -1,17 +1,20 @@
 package entities;
 
+
 public class dados {
     
     private String name;
     private int conta;   
+    private int password; 
     private double dep;   
-   
-    public dados(String name, int conta) {
+    
+    
+    public dados(String name, int conta, int password) {
         this.name = name;
         this.conta = conta;
         dep = 0;
     }       
-    public dados(String name, int conta,  double dep) {
+    public dados(String name, int conta, int password, double dep) {
         this.name = name;
         this.conta = conta;
         
@@ -30,6 +33,12 @@ public class dados {
     public void setConta(int conta) {
         this.conta = conta;
     }   
+    public int getPassword() {
+        return password;
+    }
+    public void setPassword(int password) {
+        this.password = password;
+    }
     public double getDep() {
         return dep;
     }
@@ -37,5 +46,4 @@ public class dados {
         this.dep = dep;
     }
 
-    
 }
